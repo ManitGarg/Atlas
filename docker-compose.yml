@@ -1,4 +1,23 @@
+version: "3.9"
 
-# Docker Compose configuration for Atlas
-# This file will be implemented in Phase 0.3
+services:
+  postgres:
+    image: postgres:16
 
+    container_name: atlas_postgres
+
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: atlas_user
+      POSTGRES_PASSWORD: atlas_password
+      POSTGRES_DB: atlas_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
