@@ -1,134 +1,130 @@
-````markdown
 # Atlas
 
-> **Atlas** is a Personal Student Operating System that helps students organize their academic resources, plan their studies, manage personal finances, and receive AI-powered assistance from a single platform.
+> **Personal Student Operating System**
+> A modular, AI-powered platform that helps students manage their knowledge, studies, and personal finances in one unified workspace.
 
 ---
 
-## Vision
+## Project Status
 
-Atlas is designed to become a student's central workspace throughout their academic journey. Instead of using multiple disconnected applications, Atlas combines knowledge management, study planning, personal finance, and contextual AI into one cohesive system.
+**Current Version:** Atlas v1.0
+
+**Current Phase:** ✅ Phase 0 Completed
+
+**Next Milestone:** Phase 1 – Backend Foundation & Authentication
 
 ---
 
-## Core Modules
+## Project Modules
 
-### Dashboard
-- Daily overview
-- Upcoming assignments
-- Upcoming exams
-- Study progress
-- Finance summary
-- AI daily insights
-
-### Knowledge Hub
-- Notes management
-- PDF/PPT/DOC uploads
-- Rich text & Markdown support
-- Search & tagging
-- AI summaries
-- Flashcards
-- Quiz generation
-- Document-based Q&A (RAG)
-
-### Study Planner
-- Semester management
-- Subjects
-- Assignments
-- Exams
-- Projects
-- Timetable
-- Revision planner
-- AI-generated study schedules
-
-### Personal Finance
-- Pocket money tracking
-- Income & expense management
-- Budget planning
-- Savings goals
-- Spending analytics
-- AI financial insights
-
-### AI Assistant
-- Context-aware assistant
-- Answers using Atlas data
-- Study recommendations
-- Knowledge search
-- Finance insights
-- Personalized daily summaries
+* 📚 Knowledge Hub
+* 📅 Study Planner
+* 💰 Personal Finance
+* 🤖 AI Assistant
+* 📊 Dashboard
 
 ---
 
 ## Tech Stack
 
 ### Backend
-- Python
-- FastAPI
-- PostgreSQL
-- SQLAlchemy
-- Alembic
-- JWT Authentication
+
+* Python
+* FastAPI
+* PostgreSQL
+* SQLAlchemy
+* Alembic
+* JWT Authentication
 
 ### Frontend
-- React
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
+
+* React
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
 
 ### AI
-- Google Gemini API
-- LangChain
-- ChromaDB
 
-### Development Tools
-- Docker
-- Docker Compose
-- Git
-- GitHub
-- VS Code
+* Google Gemini API
+* LangChain
+* ChromaDB
+
+### DevOps
+
+* Docker
+* Docker Compose
+* Git
+* GitHub
 
 ---
 
-## Project Structure
+# Project Progress
+
+| Phase                                             | Status      |
+| ------------------------------------------------- | ----------- |
+| Phase 0 – Development Environment & Project Setup | ✅ Completed |
+| Phase 1 – Backend Foundation & Authentication     | ⏳ Ongoing   |
+| Phase 2 – Study Planner Module                    | ⏳ Planned   |
+| Phase 3 – Knowledge Hub Module                    | ⏳ Planned   |
+| Phase 4 – Personal Finance Module                 | ⏳ Planned   |
+| Phase 5 – AI Assistant Integration                | ⏳ Planned   |
+
+---
+
+# Completed in Phase 0
+
+* ✅ Development environment configured
+* ✅ Git & GitHub repository initialized
+* ✅ Professional project structure created
+* ✅ Docker Desktop configured
+* ✅ PostgreSQL running with Docker Compose
+* ✅ Python virtual environment created
+* ✅ FastAPI backend initialized
+* ✅ First API endpoint created
+* ✅ Swagger API documentation working
+* ✅ Backend successfully running locally
+
+---
+
+# Repository Structure
 
 ```text
 Atlas/
-│
 ├── backend/
 ├── frontend/
 ├── docs/
 ├── assets/
-│
 ├── docker-compose.yml
 ├── README.md
-├── .gitignore
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-## Development Roadmap
+# Documentation
 
-- ✅ Phase 0 — Development Environment Setup
-- ⏳ Phase 0.2 — Workspace & Repository Setup
-- ⏳ Phase 0.3 — Backend Foundation & Authentication
-- ⏳ Phase 1 — Study Planner
-- ⏳ Phase 2 — Knowledge Hub
-- ⏳ Phase 3 — Personal Finance
-- ⏳ Phase 4 — AI Assistant
-- ⏳ Phase 5 — Testing & Deployment
+Project documentation is maintained phase-by-phase inside the `docs/` directory.
 
----
+Each phase includes:
 
-## Current Status
-
-🚧 Atlas is currently under active development.
-
-This repository follows an incremental development approach, where each milestone is fully implemented, tested, documented, and version-controlled before moving to the next phase.
+* Objectives
+* Architecture decisions
+* Folder & file explanations
+* Commands used
+* Problems encountered
+* Solutions
+* Learning notes
+* Interview preparation notes
 
 ---
 
-## License
+# Current Status
 
-This project is licensed under the MIT License.
-````
+Atlas has completed its complete development setup and backend initialization.
+
+The project is now ready to begin **Phase 1 – Backend Foundation & Authentication**.
+
+---
+
+**Author:** Manit Garg
