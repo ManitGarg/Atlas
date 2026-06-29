@@ -1,4 +1,7 @@
 from fastapi import FastAPI
+from app.core.config import settings
+from app.db.session import engine
+from sqlalchemy import text
 
 app = FastAPI(
     title="Atlas API",
@@ -6,10 +9,14 @@ app = FastAPI(
     version="1.0.0"
 )
 
-
 @app.get("/")
 def root():
+    with engine.connect() as connection:
+        result = connection.execute(text("SELECT version();"))
+        db_version = result.scalar()
+
     return {
-        "message": "Welcome to Atlas API 🚀",
-        "status": "Backend is running successfully!"
+        "app": settings.APP_NAME,
+        "database": "Connected Successfully ✅",
+        "postgres_version": db_version
     }
