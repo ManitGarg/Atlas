@@ -1,130 +1,359 @@
-# Atlas
+# Atlas v1.0
 
 > **Personal Student Operating System**
-> A modular, AI-powered platform that helps students manage their knowledge, studies, and personal finances in one unified workspace.
+
+Atlas is an open-source Personal Student Operating System designed to bring every essential part of a student's academic life into one organized platform.
+
+Instead of switching between multiple apps for notes, assignments, finances, schedules, and AI tools, Atlas aims to provide a single workspace where everything is connected.
 
 ---
 
-## Project Status
+# Why Atlas?
 
-**Current Version:** Atlas v1.0
+Most students use different applications for:
 
-**Current Phase:** ✅ Phase 0 Completed
+- Notes
+- Assignments
+- Expenses
+- Study Planning
+- Exam Tracking
+- AI Assistance
 
-**Next Milestone:** Phase 1 – Backend Foundation & Authentication
-
----
-
-## Project Modules
-
-* 📚 Knowledge Hub
-* 📅 Study Planner
-* 💰 Personal Finance
-* 🤖 AI Assistant
-* 📊 Dashboard
+Atlas combines all of them into one unified system.
 
 ---
 
-## Tech Stack
+# 🚀 Current Status
+
+**Version:** v1.0
+
+Current Development Phase:
+
+✅ Phase 0 — Project Initialization
+
+✅ Phase 1 — Backend Foundation
+
+⏳ Phase 2 — Academic Module
+
+⏳ Phase 3 — Finance Module
+
+⏳ Phase 4 — Dashboard & AI Integration
+
+---
+
+# ✨ Features (Current)
 
 ### Backend
 
-* Python
-* FastAPI
-* PostgreSQL
-* SQLAlchemy
-* Alembic
-* JWT Authentication
+- FastAPI
+- PostgreSQL
+- SQLAlchemy ORM
+- Docker Database
+- REST API
 
-### Frontend
+### User Management
 
-* React
-* TypeScript
-* Tailwind CSS
-* shadcn/ui
+- Create User
+- Get All Users
+- Get User by ID
+- Update User
+- Delete User
 
-### AI
+### Architecture
 
-* Google Gemini API
-* LangChain
-* ChromaDB
+- Layered Architecture
+- Service Layer
+- Dependency Injection
+- Pydantic Validation
+- Automatic Table Creation
 
-### DevOps
+### Documentation
 
-* Docker
-* Docker Compose
-* Git
-* GitHub
-
----
-
-# Project Progress
-
-| Phase                                             | Status      |
-| ------------------------------------------------- | ----------- |
-| Phase 0 – Development Environment & Project Setup | ✅ Completed |
-| Phase 1 – Backend Foundation & Authentication     | ⏳ Ongoing   |
-| Phase 2 – Study Planner Module                    | ⏳ Planned   |
-| Phase 3 – Knowledge Hub Module                    | ⏳ Planned   |
-| Phase 4 – Personal Finance Module                 | ⏳ Planned   |
-| Phase 5 – AI Assistant Integration                | ⏳ Planned   |
+- Swagger UI
+- OpenAPI Specification
 
 ---
 
-# Completed in Phase 0
+# 🛠 Tech Stack
 
-* ✅ Development environment configured
-* ✅ Git & GitHub repository initialized
-* ✅ Professional project structure created
-* ✅ Docker Desktop configured
-* ✅ PostgreSQL running with Docker Compose
-* ✅ Python virtual environment created
-* ✅ FastAPI backend initialized
-* ✅ First API endpoint created
-* ✅ Swagger API documentation working
-* ✅ Backend successfully running locally
+## Backend
+
+- Python
+- FastAPI
+- SQLAlchemy
+- Pydantic
+
+## Database
+
+- PostgreSQL
+
+## Containerization
+
+- Docker
+- Docker Compose
+
+## Tools
+
+- VS Code
+- Git
+- GitHub
 
 ---
 
-# Repository Structure
+# 🏗 Project Architecture
 
-```text
-Atlas/
-├── backend/
-├── frontend/
-├── docs/
-├── assets/
-├── docker-compose.yml
-├── README.md
-├── LICENSE
-└── .gitignore
+```
+Client
+   │
+   ▼
+FastAPI Routes
+   │
+   ▼
+Services
+   │
+   ▼
+SQLAlchemy ORM
+   │
+   ▼
+PostgreSQL
 ```
 
 ---
 
-# Documentation
+# 📁 Project Structure
 
-Project documentation is maintained phase-by-phase inside the `docs/` directory.
-
-Each phase includes:
-
-* Objectives
-* Architecture decisions
-* Folder & file explanations
-* Commands used
-* Problems encountered
-* Solutions
-* Learning notes
-* Interview preparation notes
+```
+Atlas/
+│
+├── assets/
+│
+├── backend/
+│   ├── app/
+│   │
+│   ├── api/
+│   │   ├── routes/
+│   │   │   ├── health.py
+│   │   │   └── user.py
+│   │   └── router.py
+│   │
+│   ├── core/
+│   │
+│   ├── db/
+│   │   ├── base.py
+│   │   ├── dependencies.py
+│   │   ├── init_db.py
+│   │   └── session.py
+│   │
+│   ├── models/
+│   │   └── user.py
+│   │
+│   ├── schemas/
+│   │   └── user.py
+│   │
+│   ├── services/
+│   │   └── user_service.py
+│   │
+│   ├── tests/
+│   │
+│   └── main.py
+│
+├── docs/
+│
+├── frontend/
+│
+├── docker-compose.yml
+├── README.md
+└── LICENSE
+```
 
 ---
 
-# Current Status
+# 📖 API Documentation
 
-Atlas has completed its complete development setup and backend initialization.
+After starting the backend, open:
 
-The project is now ready to begin **Phase 1 – Backend Foundation & Authentication**.
+```
+http://127.0.0.1:8000/docs
+```
+
+Swagger UI provides interactive documentation for all API endpoints.
 
 ---
 
-**Author:** Manit Garg
+# ⚙ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/ManitGarg/Atlas.git
+```
+
+Move into the project
+
+```bash
+cd Atlas
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd backend
+```
+
+Create virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate
+
+Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Database
+
+Start PostgreSQL
+
+```bash
+docker compose up -d
+```
+
+---
+
+## Run Backend
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Backend
+
+```
+http://127.0.0.1:8000
+```
+
+Swagger
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# 📌 Current API Endpoints
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | / | Health Check |
+| POST | /users | Create User |
+| GET | /users | Get All Users |
+| GET | /users/{id} | Get User |
+| PUT | /users/{id} | Update User |
+| DELETE | /users/{id} | Delete User |
+
+---
+
+# 🗺 Roadmap
+
+## ✅ Phase 0
+
+- Project Setup
+- Docker
+- PostgreSQL
+- GitHub Repository
+
+---
+
+## ✅ Phase 1
+
+- SQLAlchemy
+- User Model
+- CRUD APIs
+- Swagger Documentation
+- Layered Architecture
+
+---
+
+## ⏳ Phase 2
+
+Academic Module
+
+- Subjects
+- Notes
+- Assignments
+- Exams
+- Attendance
+
+---
+
+## ⏳ Phase 3
+
+Finance Module
+
+- Expense Tracking
+- Pocket Money
+- Monthly Reports
+- Savings Goals
+
+---
+
+## ⏳ Phase 4
+
+Dashboard
+
+- Student Dashboard
+- Analytics
+- AI Features
+- Productivity Insights
+
+---
+
+# 🌟 Future Plans
+
+- Authentication & Authorization
+- JWT Login
+- Study Planner
+- Notes Management
+- Finance Tracking
+- AI Assistant
+- Dashboard Analytics
+- Notifications
+- Mobile Responsive Frontend
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and feedback are welcome.
+
+If you'd like to improve Atlas, feel free to fork the repository and submit a pull request.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**Manit Garg**
+
+Electrical & Computer Engineering Student
+
+Building Atlas — Personal Student Operating System
